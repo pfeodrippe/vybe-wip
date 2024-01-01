@@ -1,0 +1,56 @@
+{:deps {clojure2d/clojure2d {:mvn/version "1.4.6-SNAPSHOT"}
+        org.uncomplicate/clojure-sound {:mvn/version "0.3.0"}
+        potemkin/potemkin {:mvn/version "0.4.6"}
+        org.clojure/math.combinatorics {:mvn/version "0.2.0"}
+        metosin/malli {:mvn/version "0.11.0"}
+        meta-merge/meta-merge {:mvn/version "1.0.0"}
+        metosin/jsonista {:mvn/version "0.3.7"}
+
+        ;; File watcher.
+        com.nextjournal/beholder {:mvn/version "1.0.2"}
+
+        ;; Dev.
+        djblue/portal {:mvn/version "0.48.0"}
+
+        com.badlogicgames.gdx/gdx {:mvn/version "1.12.0"}
+        com.badlogicgames.gdx/gdx-backend-lwjgl3 {:mvn/version "1.12.0"}
+        com.badlogicgames.gdx/gdx-lwjgl3-glfw-awt-macos {:mvn/version "1.12.0"}
+        com.badlogicgames.gdx/gdx-platform$natives-desktop {:mvn/version "1.12.0"}
+        com.badlogicgames.gdx/gdx-freetype {:mvn/version "1.12.0"}
+        com.badlogicgames.gdx/gdx-freetype-platform$natives-desktop {:mvn/version "1.12.0"}
+
+        ;; For flecs.
+        com.github.jnr/jnr-ffi {:mvn/version "2.2.14"}
+        com.github.omkamra/jnr {:mvn/version "0.1.0"}
+        clj-antlr/clj-antlr {:mvn/version "0.2.12"}
+
+        ;; Decompilation.
+        com.clojure-goes-fast/clj-java-decompiler {:mvn/version "0.3.4"}
+
+        #_ #_com.badlogicgames.gdx/gdx-jnigen-loader {:mvn/version "2.4.1"}
+
+        #_ #_org.lwjglx/lwjgl3-awt {:mvn/version "0.1.8"}
+
+        #_{ org.lwjglx/lwjgl3-awt {:mvn/version "0.1.8"}
+
+           org.lwjgl/lwjgl {:mvn/version "3.3.2"}
+           org.lwjgl/lwjgl$natives-macos-arm64 {:mvn/version "3.3.2"}
+           org.lwjgl/lwjgl$natives-linux {:mvn/version "3.3.2"}
+           org.lwjgl/lwjgl-glfw {:mvn/version "3.3.2"}
+           org.lwjgl/lwjgl-glfw$natives-macos-arm64 {:mvn/version "3.3.2"}
+           org.lwjgl/lwjgl-glfw$natives-linux {:mvn/version "3.3.2"}
+           org.lwjgl/lwjgl-opengl {:mvn/version "3.3.2"}
+           org.lwjgl/lwjgl-opengl$natives-macos-arm64 {:mvn/version "3.3.2"}
+           org.lwjgl/lwjgl-opengl$natives-linux {:mvn/version "3.3.2"}}}
+
+ :aliases
+ { ;; Run with clj -T:build function-in-build
+  :build {:deps {io.github.clojure/tools.build {:git/tag "v0.9.4" :git/sha "76b78fe"}}
+          :ns-default build}
+
+
+  :dev {:jvm-opts ["-XX:+CreateCoredumpOnCrash"]
+        :extra-deps {io.github.clojure/tools.build {:git/tag "v0.9.4" :git/sha "76b78fe"}}}}
+
+
+ :paths ["src" "resources" ".sounds" "target/classes" "grammars"]}
